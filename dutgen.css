@@ -22,6 +22,17 @@ body {
     margin-top: 10px;
 }
 
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .container {
     background: linear-gradient(135deg, #fff, #ffccbc);
     padding: 40px;
@@ -32,6 +43,7 @@ body {
     text-align: center;
     transform: scale(1);
     transition: transform 0.5s ease;
+    animation: slideUp 0.5s ease-out forwards;
 }
 
 .container:hover {
@@ -228,8 +240,7 @@ p {
 
 @media (max-width: 768px) {
     body {
-        height: auto;
-        padding: 20px;
+        padding: 10px; /* Reduce padding on mobile */
     }
 
     .container {
@@ -239,13 +250,11 @@ p {
     }
 
     h1 {
-        font-size: 2rem;
-        margin-bottom: 15px;
+        font-size: 2rem; /* Smaller font size for mobile */
     }
 
     p {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 1rem; /* Smaller font size for mobile */
     }
 
     .emoji-options {
@@ -254,7 +263,7 @@ p {
     }
 
     .emoji {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller emoji size for mobile */
     }
 
     .time-input,
@@ -266,26 +275,26 @@ p {
     .time-input input,
     .time-input button,
     .calendar-input input {
-        width: 100%;
+        width: 100%; /* Full width on mobile */
         padding: 10px;
-        font-size: 1rem;
+        font-size: 1rem; /* Adjust font size */
     }
 
     .text-area {
-        width: 100%;
+        width: 100%; /* Full width on mobile */
         padding: 10px;
-        font-size: 1rem;
+        font-size: 1rem; /* Adjust font size */
     }
 
     .notification {
         bottom: 10px;
         right: 10px;
         padding: 8px 16px;
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Adjust font size */
     }
 
     .color-picker {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust color picker size */
         padding: 10px;
     }
 }
