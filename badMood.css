@@ -1,3 +1,14 @@
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #070F2B, #1B1A55); /* Gradient background */
@@ -5,6 +16,7 @@ body {
     text-align: center; /* Center all text */
     padding: 20px;
     margin: 0; /* Remove default margin */
+    animation: slideUp 0.5s ease-out forwards;
 }
 
 h1 {
